@@ -5,6 +5,12 @@
 <h2 align="center">Descrição do Projeto</h2>
 <p align="center">Projeto em Next.js conectado ao Stripe para simnular e-commerce com opção de adicionar produto ao carrinho de compras, somar e subtrair quantidades e excluir item antes de confirmar compra. Integração com API Via Cep para formulário de endereço de entrega.</p>
 
+<p align="center">
+   <a href="https://www.linkedin.com/in/luccaseccodev/">
+      <img alt="Lucca Secco" src="https://img.shields.io/badge/-Lucca Secco-2A2C39?style=flat&logo=Linkedin&logoColor=white" />
+   </a>
+</p>
+
 <hr />
 
 # :wrench: Inicialização
