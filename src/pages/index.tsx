@@ -1,6 +1,6 @@
 import { useKeenSlider } from 'keen-slider/react'
 import Image from "next/image"
-import { ArrowArcLeft, ArrowArcRight } from 'phosphor-react'
+// import { ArrowArcLeft, ArrowArcRight } from 'phosphor-react'
 
 import { HomeContainer, Product } from "../styles/pages/home";
 import 'keen-slider/keen-slider.min.css'
