@@ -10,20 +10,21 @@ export const Container = styled('div', {
 
 export const Header = styled('header', {
   display: 'flex',
-  padding: '2rem',
+  padding: '4rem 2rem',
   width: '100%',
   maxWidth: 1180,
   margin: '0 auto',
   alignItems: 'center',
   justifyContent: 'space-between',
+  maxHeight: 80,
 
   '.logo-container': {
     display: 'flex',
     alignItems: 'center',
-    gap: '2rem',
+    gap: '1rem',
 
     span: {
-      fontSize: '$2xl'
+      fontSize: '$lg'
     }
   },
 
