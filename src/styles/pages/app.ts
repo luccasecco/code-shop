@@ -10,7 +10,7 @@ export const Container = styled('div', {
 
 export const Header = styled('header', {
   display: 'flex',
-  padding: '4rem 2rem',
+  padding: '4rem 0',
   width: '100%',
   maxWidth: 1180,
   margin: '0 auto',
@@ -23,6 +23,10 @@ export const Header = styled('header', {
     alignItems: 'center',
     gap: '1rem',
 
+    img: {
+      cursor: 'pointer',
+    },
+
     span: {
       fontSize: '$lg'
     }
@@ -33,13 +37,13 @@ export const Header = styled('header', {
     padding: '0.8rem',
     borderRadius: '50%',
     lineHeight: 0,
-    backgroundColor: '$gray800',
-    color: '#1ea450',
+    backgroundColor: '$green300',
+    color: '$gray900',
     cursor: 'pointer',
-    transition: 'backgroundColor 0.2s ease-in-out',
+    transition: 'filter 0.2s ease-in-out',
 
     '&:hover': {
-      backgroundColor: '$gray900',
+      filter: 'brightness(0.9)',
     }
   }
 
