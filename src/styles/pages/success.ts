@@ -1,16 +1,17 @@
-import { styled } from "..";
+import { styled } from '..'
 
 export const SuccessContainer = styled('main', {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'start',
   margin: '0 auto',
   height: 656,
 
   h1: {
     fontSize: '$2xl',
-    color: '$gray100'
+    color: '$gray100',
+    marginTop: '3rem',
   },
 
   p: {
@@ -19,11 +20,7 @@ export const SuccessContainer = styled('main', {
     maxWidth: 560,
     textAlign: 'center',
     marginTop: '2rem',
-    lineHeight: 1.4
-  },
-
-  strong: {
-    color: '$green500',
+    lineHeight: 1.4,
   },
 
   a: {
@@ -36,10 +33,17 @@ export const SuccessContainer = styled('main', {
 
     '&:hover': {
       color: '$green300',
-    }
-  }
-})
+    },
+  },
 
+  variants: {
+    multiple: {
+      true: {
+        flexDirection: 'row',
+      },
+    },
+  },
+})
 
 export const ImageContainer = styled('div', {
   width: '100%',
@@ -55,6 +59,35 @@ export const ImageContainer = styled('div', {
   justifyContent: 'center',
 
   img: {
-    objectFit: 'cover'
-  }
+    objectFit: 'cover',
+  },
+
+  variants: {
+    multiple: {
+      true: {
+        width: 140,
+        maxWidth: 140,
+        height: 140,
+        borderRadius: 9999999,
+        filter:
+          'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+      },
+    },
+  },
+})
+
+export const SuccessProductsContainer = styled('div', {
+  variants: {
+    isMultiple: {
+      true: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: '5%',
+        '& > div': {
+          marginLeft: '-10%',
+        },
+      },
+    },
+  },
 })

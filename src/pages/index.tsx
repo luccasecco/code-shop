@@ -3,7 +3,6 @@ import Image from "next/image"
 import Head from 'next/head'
 
 import { useKeenSlider } from 'keen-slider/react'
-// import { ArrowArcLeft, ArrowArcRight } from 'phosphor-react'
 import { stripe } from '../lib/stripe';
 
 import { HomeContainer, Product } from "../styles/pages/home";
@@ -12,18 +11,24 @@ import { HomeContainer, Product } from "../styles/pages/home";
 import 'keen-slider/keen-slider.min.css'
 import Stripe from 'stripe';
 import Link from 'next/link';
+import { formatCurrencyString } from 'use-shopping-cart';
+
+type ProductProps = {
+  name: string
+  id: string
+  imageUrl: string
+  price: string
+  description: string
+  priceNotFormatted: number
+  priceId: string
+}
 
 interface HomeProps {
-  products: {
-    id: string;
-    name: string;
-    imageUrl: string;
-    price: number;
-  }[]
+  products: ProductProps[]
 }
 
 export default function Home({ products }: HomeProps) {
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef] = useKeenSlider({
     slides: {
       perView: 3,
       spacing: 48,
@@ -54,9 +59,6 @@ export default function Home({ products }: HomeProps) {
           )
         })}
 
-        {/* <button onClick={() => instanceRef.current.next()}><ArrowArcRight /></button>
-     <button onClick={() => instanceRef.current.prev()}><ArrowArcLeft /></button>  */}
-
       </HomeContainer>
     </>
   )
@@ -72,11 +74,15 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
       id: product.id,
       name: product.name,
-      imageUrl: product.images[0],
-      price: new Intl.NumberFormat('pt-BR', {
-        style: 'currency',
+      imageUrl: product.images[0] ?? '',
+      price: formatCurrencyString({
         currency: 'BRL',
-      }).format(price.unit_amount / 100)
+        value: price.unit_amount,
+        language: 'pt-BR',
+      }),
+      priceId: price.id,
+      description: product.description,
+      priceNotFormatted: price.unit_amount,
     }
   })
 

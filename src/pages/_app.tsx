@@ -1,31 +1,22 @@
-import { AppProps } from "next/app"
-import Image from "next/image"
-import { ShoppingCartSimple } from 'phosphor-react'
-import { globalStyles } from "../styles/global"
+import { AppProps } from 'next/app'
 
-import logoImg from '../assets/code-logo.svg'
-import { Container, Header } from "../styles/pages/app"
-import Link from "next/link"
+import { globalStyles } from '../styles/global'
+
+import { CartProvider } from 'use-shopping-cart'
+import { Header } from '../components/Header'
+import { Container } from '../styles/pages/app'
 
 globalStyles()
-function MyApp({ Component, pageProps }: AppProps) {
+
+const stripeKey = process.env.STRIPE_PUBLIC_KEY
+
+export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Container>
-      <Header>
-        <div className="logo-container">
-          <Link href="/">
-            <Image src={logoImg} width={150} height={135} alt="logo" />
-          </Link>
-          <span>.Shop</span>
-        </div>
-        <button><ShoppingCartSimple size={32} weight="fill" /></button>
-      </Header>
-
-      <Component {...pageProps} />
-    </Container>
+    <CartProvider cartMode="checkout-session" stripe={stripeKey} currency="BRL">
+      <Container>
+        <Header />
+        <Component {...pageProps} />
+      </Container>
+    </CartProvider>
   )
-
-
 }
-
-export default MyApp
