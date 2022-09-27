@@ -1,5 +1,6 @@
-import { GetServerSideProps, GetStaticProps } from 'next';
+import { GetStaticProps } from 'next';
 import Image from "next/image"
+import Head from 'next/head'
 
 import { useKeenSlider } from 'keen-slider/react'
 // import { ArrowArcLeft, ArrowArcRight } from 'phosphor-react'
@@ -30,26 +31,34 @@ export default function Home({ products }: HomeProps) {
   })
 
   return (
-    <HomeContainer ref={sliderRef} className="keen-slider">
-      {products.map(product => {
-        return (
-          <Link href={`/product/${product.id}`} key={product.id}>
-            <Product className="keen-slider__slide">
-              <Image src={product.imageUrl} width={520} height={480} alt="" />
-
-              <footer>
-                <strong>{product.name}</strong>
-                <span>{product.price}</span>
-              </footer>
-            </Product>
-          </Link>
-        )
-      })}
+    <>
+      <Head>
+        <title>Home | Code Shop</title>
+      </Head>
 
 
-    </HomeContainer>
-    /* <button onClick={() => instanceRef.current.next()}><ArrowArcRight /></button>
-    <button onClick={() => instanceRef.current.prev()}><ArrowArcLeft /></button> */
+      <HomeContainer ref={sliderRef} className="keen-slider">
+
+        {products.map(product => {
+          return (
+            <Link href={`/product/${product.id}`} key={product.id}>
+              <Product className="keen-slider__slide">
+                <Image src={product.imageUrl} width={520} height={480} alt="" />
+
+                <footer>
+                  <strong>{product.name}</strong>
+                  <span>{product.price}</span>
+                </footer>
+              </Product>
+            </Link>
+          )
+        })}
+
+        {/* <button onClick={() => instanceRef.current.next()}><ArrowArcRight /></button>
+     <button onClick={() => instanceRef.current.prev()}><ArrowArcLeft /></button>  */}
+
+      </HomeContainer>
+    </>
   )
 }
 
