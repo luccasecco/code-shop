@@ -23,6 +23,10 @@ export const SuccessContainer = styled('main', {
     lineHeight: 1.4,
   },
 
+  strong: {
+    color: '$green500'
+  },
+
   a: {
     marginTop: '5rem',
     display: 'block',
