@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">Descrição do Projeto</h2>
-<p align="center">Projeto em Next.js conectado ao Stripe para simnular e-commerce com opção de adicionar produto ao carrinho de compras, somar e subtrair quantidades e excluir item antes de confirmar compra. Integração com API Via Cep para formulário de endereço de entrega.</p>
+<p align="center">Projeto em Next.js conectado ao Stripe para simular e-commerce. Integração com API do Stripe para checkout e confirmação de pagamento. Redirecionamento para página de sucesso após confirmados os dados do usuário.</p>
 
 <p align="center">
    <a href="https://www.linkedin.com/in/luccaseccodev/">
@@ -23,6 +23,13 @@
 
 ### 3) Instale as dependências
 `npm install`
+
+
+# :movie_camera: Preview
+
+
+https://user-images.githubusercontent.com/101674470/192796828-5d68346f-e40f-4964-9a36-a9cc2158dcf6.mp4
+
 
 # :computer: Autor
 
