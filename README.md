@@ -32,7 +32,8 @@ Essas instruções irão indicar como clonar e inicializar a aplicação na sua 
 # :movie_camera: Preview
 
 
-https://user-images.githubusercontent.com/101674470/192796828-5d68346f-e40f-4964-9a36-a9cc2158dcf6.mp4
+https://user-images.githubusercontent.com/101674470/193287732-4f11d4ea-380c-4ce9-832a-05604d33c5e1.mp4
+
 
 
 ### :computer: Techs and dependencies
