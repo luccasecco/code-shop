@@ -13,7 +13,9 @@
 
 <hr />
 
-# :wrench: Inicialização
+### 🚀 Starting! 
+
+Essas instruções irão indicar como clonar e inicializar a aplicação na sua máquina local.
 
 ### 1) Clone o projeto
 `git clone https://github.com/luccasecco/code-shop.git`
@@ -24,12 +26,23 @@
 ### 3) Instale as dependências
 `npm install`
 
+### 3) Inicialize o projeto
+`npm run dev`
 
 # :movie_camera: Preview
 
 
 https://user-images.githubusercontent.com/101674470/192796828-5d68346f-e40f-4964-9a36-a9cc2158dcf6.mp4
 
+
+### :computer: Techs and dependencies
+
+- [React](https://pt-br.reactjs.org/docs/react-component.html)
+- [Next.js](https://nextjs.org/)
+- [Phosphor Icons](https://phosphoricons.com/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [Stitches](https://stitches.dev/)
+- [Stripe](https://stripe.com/br)
 
 # :computer: Autor
 
