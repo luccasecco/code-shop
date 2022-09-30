@@ -32,7 +32,6 @@ export default function Home({ products }: HomeProps) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider({
-    loop: true,
     breakpoints: {
       "(min-width: 400px)": {
         slides: { perView: 2, spacing: 5 },
