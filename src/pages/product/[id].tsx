@@ -5,6 +5,7 @@ import { useRouter } from "next/router"
 import { useState } from "react"
 import Stripe from "stripe"
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
+import { Loading } from "../../components/Loading"
 import { stripe } from "../../lib/stripe"
 import { ImageContainer, ProductContainer, ProductDetails } from "../../styles/pages/product"
 
@@ -45,7 +46,7 @@ export default function Product({ product }: ProductProps) {
   const { isFallback } = useRouter()
 
   if (isFallback) {
-    return <p>Loading...</p>
+    return <Loading />
   }
 
   return (
